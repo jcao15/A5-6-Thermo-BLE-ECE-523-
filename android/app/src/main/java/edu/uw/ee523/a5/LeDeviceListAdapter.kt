@@ -1,17 +1,12 @@
-package edu.uw.ee523.btdemo
+package edu.uw.ee523.a5
 
-import android.Manifest
 import android.bluetooth.BluetoothDevice
-import android.content.Context
-import android.content.pm.PackageManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
-import edu.uw.ee523.a5.R
 
 // Adapted from https://android.googlesource.com/platform/development/+/7167a054a8027f75025c865322fa84791a9b3bd1/samples/BluetoothLeGatt/src/com/example/bluetooth/le/DeviceScanActivity.java
 
@@ -43,6 +38,7 @@ class LeDeviceListAdapter : Adapter<LeDeviceListAdapter.ViewHolder>() {
         mLeDevices.clear()
         notifyItemRangeRemoved(0, num)
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(parent)
     }
@@ -60,26 +56,12 @@ class LeDeviceListAdapter : Adapter<LeDeviceListAdapter.ViewHolder>() {
         return i.toLong()
     }
 
-    class ViewHolder private constructor(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener{
+    class ViewHolder private constructor(itemView: View) : RecyclerView.ViewHolder(itemView),
+        View.OnClickListener {
         var deviceName: TextView? = itemView.findViewById(R.id.device_name)
         var deviceAddress: TextView? = itemView.findViewById(R.id.characteristics)
-        lateinit var mContext: Context
 
         fun bind(item: BluetoothDevice) {
-            if (ActivityCompat.checkSelfPermission(
-                    mContext,
-                    Manifest.permission.BLUETOOTH_CONNECT
-                ) != PackageManager.PERMISSION_GRANTED
-            ) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
-                return
-            }
             deviceName!!.text = item.name
             deviceAddress!!.text = item.address
         }

@@ -1,8 +1,8 @@
-package edu.uw.ee523.btdemo
-
+package edu.uw.ee523.a5
 import android.view.MotionEvent
 import androidx.recyclerview.selection.ItemDetailsLookup
 import androidx.recyclerview.widget.RecyclerView
+import edu.uw.ee523.a5.BluetoothDeviceListAdapter
 
 class MyItemDetailsLookup(private val recyclerView: RecyclerView) :
     ItemDetailsLookup<String>() {

@@ -1,21 +1,17 @@
-package edu.uw.ee523.btdemo
+package edu.uw.ee523.a5
 
 import android.bluetooth.BluetoothGattCharacteristic
 import android.bluetooth.BluetoothGattService
-import android.os.Build
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import edu.uw.ee523.a5.R
-import java.util.stream.Collectors
 
-class GattListAdapter:  ListAdapter<BluetoothGattService, GattListAdapter.ItemViewHolder>(GattListAdapter.DiffCallback())  {
+class GattListAdapter :
+    ListAdapter<BluetoothGattService, GattListAdapter.ItemViewHolder>(GattListAdapter.DiffCallback()) {
 
     private val TAG: String = "GattListAdapter"
 
@@ -37,7 +33,7 @@ class GattListAdapter:  ListAdapter<BluetoothGattService, GattListAdapter.ItemVi
         items.addAll(currentList)
         services.forEach { service ->
             if (!currentList.contains(service)) {
-               items.add(service)
+                items.add(service)
             }
         }
         submitList(items)
@@ -49,7 +45,7 @@ class GattListAdapter:  ListAdapter<BluetoothGattService, GattListAdapter.ItemVi
         val charas: MutableList<BluetoothGattCharacteristic> = mutableListOf()
 
 
-        val charString = buildString{
+        val charString = buildString {
             // Loops through available Characteristics.
             gattCharacteristics.forEach { gattCharacteristic ->
 //                Log.i(TAG, "Characteristic UUID: " + gattCharacteristic.uuid.toString())
@@ -86,7 +82,7 @@ class GattListAdapter:  ListAdapter<BluetoothGattService, GattListAdapter.ItemVi
         }
     }
 
-    class DiffCallback : DiffUtil.ItemCallback<BluetoothGattService>(){
+    class DiffCallback : DiffUtil.ItemCallback<BluetoothGattService>() {
 
         override fun areItemsTheSame(
             oldItem: BluetoothGattService,
