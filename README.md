@@ -12,9 +12,9 @@ User Defined Mode: As user set a target counter, once user shakes the device up 
 automatically play a ringtone.
 
 ## Walkthrough
+<img src="docs/1.png" width="400">   <img src="docs/2.png" width="400">
 
-![Sample Screenshot](docs/1.png?raw=tru) ![Sample Screenshot](docs/2.png?raw=tru)
-![Sample Screenshot](docs/3.png?raw=tru) ![Sample Screenshot](docs/4.png?raw=tru)
+<img src="docs/3.png" width="400">   <img src="docs/4.png" width="400">
 
 ## Reflection/Summary
 
