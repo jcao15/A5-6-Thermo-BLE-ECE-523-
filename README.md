@@ -2,7 +2,7 @@
 
 ## Overview
 
-I built building a system which use the Circuit Playground to capture the temperature and button clicks, 
+I built a system which use the Circuit Playground to capture the temperature and button clicks, 
 then use the Flora to publish a BLE service which sends out that data, which will be consumed by an Android app connected to it.
 
 ## Using the app 
