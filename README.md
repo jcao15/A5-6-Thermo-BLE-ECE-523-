@@ -13,8 +13,8 @@ automatically play a ringtone.
 
 ## Walkthrough
 
-![Sample Screenshot](imgs/11.png?raw=tru) ![Sample Screenshot](imgs/22.png?raw=tru)
-![Sample Screenshot](imgs/33.png?raw=tru)
+![Sample Screenshot](docs/1.png?raw=tru) ![Sample Screenshot](docs/2.png?raw=tru)
+![Sample Screenshot](docs/3.png?raw=tru) ![Sample Screenshot](docs/4.png?raw=tru)
 
 ## Reflection/Summary
 
