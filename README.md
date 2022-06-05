@@ -1,15 +1,17 @@
-# A4: Real-time smartphone sensor data processing. Accelerometer/Gyroscope applications (Jeremy Cao)
+# A5/6: Android, Arduino and BLE (Jeremy Cao)
 
 ## Overview
 
-I built an Android app to detect shake action in two modes in response to sensors on the device.
+I built building a system which use the Circuit Playground to capture the temperature and button clicks, 
+then use the Flora to publish a BLE service which sends out that data, which will be consumed by an Android app connected to it.
 
 ## Using the app 
 
-There is two button in the main page that are clickable to enter different mode.
-Free Mode: As user shaking the device, the counter will increment by shake detection.
-User Defined Mode: As user set a target counter, once user shakes the device up to the number of target counter, device will be
-automatically play a ringtone.
+There is three button in the main page that are clickable for "Scan", "Connect", "Disconnect".
+"Scan" button is enable user to search the nearby Bluetooth devices.
+"Connect" button is eneble user to connect the Android mobile device to another bluetooth device (Need to long click the device's BLE name to make a selection).
+"Disconnect" button eanble user to disconnect the andriod mobile device with the bluetooth device.
+
 
 ## Walkthrough
 <img src="docs/1.png" width="400">   <img src="docs/2.png" width="400">
@@ -19,8 +21,7 @@ automatically play a ringtone.
 ## Reflection/Summary
 
 To Do:
--Pull-ups detector detects movements with “certain” accuracy.
-- More accurate moving average filter implementation
+- Selected device window frame should be changed back to blue after disconnection.
 
 
 
