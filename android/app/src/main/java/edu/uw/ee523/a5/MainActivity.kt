@@ -321,7 +321,12 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("MissingPermission")
     private fun disconnectDevice() {
-        bluetoothGatt?.disconnect()
+//        bluetoothGatt!!.disconnect()
+        bluetoothGatt?.close()
+        binding.textView3.text = "N/A"
+        binding.textView4.text = "N/A"
+        binding.textViewStatus.text =
+            "New val read: N/A"
         binding.buttonDisconnect.isEnabled = false
         binding.buttonConnect.isEnabled = true
     }

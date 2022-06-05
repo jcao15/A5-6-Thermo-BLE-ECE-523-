@@ -46,7 +46,7 @@ void setup(void)
   Serial.begin(115200);
   CircuitPlayground.begin();
   Serial.println(F("Adafruit Temperature and Button"));
-  Serial.println(F("---------------------------------------------------"));
+  Serial.println(F("-------------------------------"));
 
   randomSeed(micros());
 
@@ -88,7 +88,7 @@ void setup(void)
   Serial.println(F("Adding the temperature button Service definition (UUID = 0x180D): "));
   success = ble.sendCommandWithIntReply( F("AT+GATTADDSERVICE=UUID=0x180D"), &tempBtnServiceId);
   if (! success) {
-    error(F("Could not add HRM service"));
+    error(F("Could not add TEMP service"));
   }
 
 
@@ -108,7 +108,7 @@ void setup(void)
     error(F("Could not add Button characteristic"));
   }
 
-  /* Add the Heart Rate Service to the advertising data (needed for Nordic apps to detect the service) */
+  /* Add the Temperature readding Service to the advertising data  */
   Serial.print(F("Adding Temperature Button Service UUID to the advertising payload: "));
   ble.sendCommandCheckOK( F("AT+GAPSETADVDATA=02-01-06-05-02-0d-18-0a-18") );
 
