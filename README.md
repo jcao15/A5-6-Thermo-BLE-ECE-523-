@@ -1,5 +1,26 @@
-# Assignment 5/6
+# A4: Real-time smartphone sensor data processing. Accelerometer/Gyroscope applications (Jeremy Cao)
 
-Open the project in the Android directory, and add/commit your Android files there. 
+## Overview
 
-Put your Arduino files in the arduino directory. 
+I built an Android app to detect shake action in two modes in response to sensors on the device.
+
+## Using the app 
+
+There is two button in the main page that are clickable to enter different mode.
+Free Mode: As user shaking the device, the counter will increment by shake detection.
+User Defined Mode: As user set a target counter, once user shakes the device up to the number of target counter, device will be
+automatically play a ringtone.
+
+## Walkthrough
+
+![Sample Screenshot](imgs/11.png?raw=tru) ![Sample Screenshot](imgs/22.png?raw=tru)
+![Sample Screenshot](imgs/33.png?raw=tru)
+
+## Reflection/Summary
+
+To Do:
+-Pull-ups detector detects movements with “certain” accuracy.
+- More accurate moving average filter implementation
+
+
+
