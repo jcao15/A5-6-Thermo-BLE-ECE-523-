@@ -83,7 +83,7 @@ void setup(void)
     error(F("Could not set device name?"));
   }
 
-  /* Add the Heart Rate Service definition */
+  /* Add the Temperature Check Service definition */
   /* Service ID should be 1 */
   Serial.println(F("Adding the temperature button Service definition (UUID = 0x180D): "));
   success = ble.sendCommandWithIntReply( F("AT+GATTADDSERVICE=UUID=0x180D"), &tempBtnServiceId);
